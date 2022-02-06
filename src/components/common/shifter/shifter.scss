@@ -1,0 +1,24 @@
+.shifter {
+  background: #2b2a2a;
+  position: fixed;
+  left: 30px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+}
+
+.shifter--link {
+  color: #fff;
+  font-size: 30px;
+}

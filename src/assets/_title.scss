@@ -1,0 +1,17 @@
+@import './variable';
+
+.title {
+  font-family: 'Poppins', sans-serif;
+
+  &-orange {
+    color: $px-main;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-fs16 {
+    font-size: 1rem;
+  }
+}
