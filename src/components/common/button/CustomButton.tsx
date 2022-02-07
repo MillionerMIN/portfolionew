@@ -22,7 +22,7 @@ const CustomButton: React.FC<CustomButtonPropsType> = ({
       className={finalClassName}
       {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
     >
-      <span className='custom-button--text'>more about me</span>
+      <span className='custom-button--text'>{restProps.value}</span>
       <span className='custom-button--icon'>{restProps.element}</span>
     </button>
   );

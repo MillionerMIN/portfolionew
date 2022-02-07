@@ -1,0 +1,45 @@
+.box-stat {
+  border-radius: 5px;
+  border: 1px solid var(--color-box);
+}
+
+.box-stat-pd {
+  padding: 20px 30px 25px 40px;
+}
+
+.box-stat--number {
+  position: relative;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: var(--color-block);
+
+  &::after {
+    content: '+';
+    position: absolute;
+    left: 35px;
+    font-size: 1.875rem;
+    font-weight: 300;
+    top: 2px;
+  }
+}
+
+.box-stat--desc {
+  position: relative;
+  padding-left: 45px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 30px;
+    height: 1px;
+    background: #777;
+  }
+
+  span {
+    display: block;
+  }
+}

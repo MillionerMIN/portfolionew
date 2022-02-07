@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
 :root {
   font-size: 1em;
 }
@@ -16,6 +24,9 @@ body[data-theme='dark'] {
   --color-block: #ffb400;
   --color-bg: url('./images/bg/bg-portfolio.jpg');
   --photo: url('./images/person/person-dark.jpg');
+  --color-title: hsla(0, 0%, 100%, 0.07);
+
+  --color-box: #252525;
 
   --color-button: #2b2a2a;
   --color-icon: #fff;
@@ -27,6 +38,9 @@ body[data-theme='light'] {
   --color-bg: #fff;
   --color-block: #72b526;
   --photo: url('./images/person/person-light.jpg');
+  --color-title: rgba(30, 37, 48, 0.07);
+
+  --color-box: #ddd;
 
   --color-button: #eee;
   --color-icon: #fff;
@@ -42,6 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--color-bg);
+  background-position: fixed;
   background-size: cover;
   color: var(--color-text);
   box-sizing: border-box;

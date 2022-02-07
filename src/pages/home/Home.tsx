@@ -26,7 +26,7 @@ export const Home = () => {
               SPA with React/Redux (JS/TS). I`m from Minsk. I like work with new
               people. New people new Experiences.
             </p>
-            <CustomButton element={iconArrowRight} />
+            <CustomButton element={iconArrowRight} value='more about me' />
           </div>
           <div className='home--photo'></div>
         </div>
