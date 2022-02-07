@@ -1,0 +1,41 @@
+.title-section {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.title-section-pd {
+  padding: 80px 0;
+}
+
+.title-section-mr {
+  margin: 0 auto;
+}
+
+.title-section h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 900 !important;
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title-section h1 span {
+  color: var(--color-block);
+}
+
+.title-section--bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  letter-spacing: 10px;
+  line-height: .7;
+  font-size: 110px;
+  text-transform: uppercase;
+  font-weight: 900;
+  transform: translateY(-50%);
+  color: hsla(0, 0%, 100%, .07);
+}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 @import './assets/title';
 
 *,
@@ -25,7 +26,6 @@ body[data-theme='light'] {
   --color-text: #666;
   --color-bg: #fff;
   --color-block: #72b526;
-  --color-bg: #fff;
   --photo: url('./images/person/person-light.jpg');
 
   --color-button: #eee;
@@ -41,7 +41,8 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-bg);
+  background-image: var(--color-bg);
+  background-size: cover;
   color: var(--color-text);
   box-sizing: border-box;
   transition: all 0.2s linear;
