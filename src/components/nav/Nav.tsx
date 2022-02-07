@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-import NavButton from '../common/button/NavButton';
+import NavButton from '../common/nav-button/NavButton';
 
 const itemsNav = [
   { name: 'Home', icon: faHome, href: '/' },

@@ -1,0 +1,59 @@
+.custom-button {
+  position: relative;
+  border: 1px solid var(--color-block);
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: transparent;
+  transition: all 0.25s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-block);
+    transform: translateX(100%);
+    transition: all 0.3s ease-out;
+  }
+}
+
+.custom-button:hover.custom-button::before {
+  transform: translateX(0);
+  transition: 0.3s;
+}
+
+.custom-button-pd {
+  padding: 16px 70px 16px 35px;
+}
+
+.custom-button--text {
+  position: relative;
+  z-index: 2;
+  color: var(--color-text);
+  transition: all 0.3s ease-out;
+}
+
+.custom-button--icon {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  bottom: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: var(--color-text);
+  background-color: var(--color-block);
+  border-radius: 50%;
+}

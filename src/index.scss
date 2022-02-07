@@ -1,6 +1,8 @@
 @import './assets/title';
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -22,7 +24,7 @@ body[data-theme='dark'] {
 body[data-theme='light'] {
   --color-text: #666;
   --color-bg: #fff;
-  --color-block: #72b626;
+  --color-block: #72b526;
   --color-bg: #fff;
   --photo: url('./images/person/person-light.jpg');
 
