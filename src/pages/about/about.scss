@@ -87,3 +87,12 @@
   text-transform: uppercase;
   color: var(--color-text);
 }
+
+.about--experience {
+  padding-bottom: 15px;
+}
+
+.about--resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
