@@ -4,10 +4,11 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import CustomButton from '../../components/common/button/CustomButton';
-
 // type HomeType = {
 //   data: string;
 // };
+
+console.log(faArrowRight);
 
 export const Home = () => {
   const iconArrowRight = <FontAwesomeIcon icon={faArrowRight} />;
