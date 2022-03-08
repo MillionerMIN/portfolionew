@@ -34,19 +34,19 @@ export default function ScrollToTop() {
 
   return (
     <>
-      <div>
+      <div className='wrapper'>
         <CSSTransition
           in={isVisible}
           timeout={500}
           mountOnEnter
           unmountOnExit
           classNames={{
-            enterActive: 'scroll_up-show',
-            enterDone: 'scroll_up-enter-done',
-            exitActive: 'scroll_up-hide',
+            enterActive: 'scroll-up-show',
+            enterDone: 'scroll-up-enter-done',
+            exitActive: 'scroll-up-hide',
           }}
         >
-          <div onClick={scrollToTop} className='scroll_up'>
+          <div onClick={scrollToTop} className='scroll-up'>
             <FontAwesomeIcon icon={faAngleUp} />
           </div>
         </CSSTransition>

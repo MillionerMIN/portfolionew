@@ -5,16 +5,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const NavButton = (props: NavButtonType) => {
-  const { onChange, selected } = props;
+  const { selected } = props;
   const { name, icon, href } = props.data;
   const [isActive, setIsActive] = useState<boolean>(false);
 
-  const isSelected = selected === name ? 'nav-button-selected' : '';
+  const isSelected = selected === href ? 'nav-button-selected' : '';
   return (
     <Link
       className={`nav-button ${isSelected}`}
       to={href}
-      onClick={() => onChange(name)}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
@@ -33,7 +32,6 @@ type NavButtonType = {
     icon: any;
     href: string;
   };
-  onChange: (name: string) => void;
   selected: string;
 };
 

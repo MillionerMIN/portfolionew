@@ -1,4 +1,4 @@
-.scroll_up {
+.scroll-up {
   width: 50px;
   height: 50px;
   position: fixed;
@@ -18,33 +18,25 @@
   animation: show-scrollUp .5s forwards;
 
   &:hover {
-    opacity: 1;
-    color: var(--color-block);
+    background-color: var(--color-block);
   }
 }
 
-
-.scroll_up:hover svg {
-  opacity: 1;
-
-}
-
-.scroll_up svg {
+.scroll-up svg {
   width: 16px;
   height: 16px;
-  color: var(--color-text)
 }
 
-.scroll_up-show {
+.scroll-up-show {
   animation: show-scrollUp .5s forwards;
 }
 
-.scroll_up-enter-done {
+.scroll-up-enter-done {
   opacity: 0.5;
   transform: translateX(0);
 }
 
-.scroll_up-hide {
+.scroll-up-hide {
   animation: hide-scrollUp .5s forwards;
 }
 
@@ -59,14 +51,14 @@
   }
 
   100% {
-    opacity: 0.5;
+    opacity: 0.6;
     transform: translateX(0);
   }
 }
 
 @keyframes hide-scrollUp {
   0% {
-    opacity: 0.5;
+    opacity: 0.6;
     transform: translateX(0);
   }
 

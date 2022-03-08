@@ -6,7 +6,7 @@ import {
   faHome,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import NavButton from '../common/nav-button/NavButton';
 
@@ -18,21 +18,10 @@ const itemsNav = [
 ];
 
 const Nav = () => {
-  const [selected, setSelected] = useState<string>('Home');
-
-  const selectHandler = (name: string) => {
-    setSelected(name);
-  };
+  const { pathname } = useLocation();
 
   const elements = itemsNav.map((item, index) => {
-    return (
-      <NavButton
-        key={index}
-        data={item}
-        onChange={selectHandler}
-        selected={selected}
-      />
-    );
+    return <NavButton key={index} data={item} selected={pathname} />;
   });
   return <nav className='nav nav-position nav-mr'>{elements}</nav>;
 };

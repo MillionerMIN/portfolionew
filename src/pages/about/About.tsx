@@ -9,6 +9,7 @@ import ProgressBar from '../../components/common/progress-bar/ProgressBar';
 import ResumeBox from '../../components/common/resume-box/ResumeBox';
 import Separator from '../../components/common/separator/Separator';
 import Title from '../../components/common/title/Title';
+import useAnimScroll from '../../hooks/useAnimScroll/AnimScroll';
 
 const personalData = [
   { title: 'First Name', value: 'Vladimir' },
@@ -134,6 +135,7 @@ const About = () => {
   ));
 
   const iconDownload = <FontAwesomeIcon icon={faDownload} />;
+
   return (
     <>
       <Title title='about' span='me' bg='resume' />

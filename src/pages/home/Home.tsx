@@ -29,7 +29,7 @@ const Home = () => {
             <CustomButton element={iconArrowRight} value='more about me' />
           </div>
           <TransitionGroup>
-            <CSSTransition classNames='option' timeout={200}>
+            <CSSTransition classNames='home--photo' timeout={200}>
               <div className='home--photo'></div>
             </CSSTransition>
           </TransitionGroup>

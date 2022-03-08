@@ -17,7 +17,7 @@
   &:hover {
     background: var(--color-block);
     color: var(--color-icon);
-    transition: margin-right 1s;
+    transition: all 1s margin-right 1s;
   }
 
   &-selected {
