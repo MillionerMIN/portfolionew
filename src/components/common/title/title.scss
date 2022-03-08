@@ -13,16 +13,24 @@
   margin: 0 auto;
 }
 
-.title-section h1 {
+.title-section__title {
   margin: 0;
   font-size: 56px;
   font-weight: 900 !important;
   color: var(--color-text);
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: all .8s ease 0s;
 }
 
-.title-section h1 span {
+.title-section__title._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.title-section__title span {
   color: var(--color-block);
 }
 
@@ -36,6 +44,14 @@
   font-size: 110px;
   text-transform: uppercase;
   font-weight: 900;
-  transform: translateY(-50%);
   color: var(--color-title);
+  transform: translateY(-120%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+
+.title-section--bg._active {
+  transform: translateY(-50%);
+  opacity: 1;
+
 }

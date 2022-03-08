@@ -7,7 +7,7 @@ import BoxStat from '../../components/common/box-stat/BoxStat';
 import CustomButton from '../../components/common/button/CustomButton';
 import ProgressBar from '../../components/common/progress-bar/ProgressBar';
 import ResumeBox from '../../components/common/resume-box/ResumeBox';
-import Siparator from '../../components/common/siparator/Siparator';
+import Separator from '../../components/common/separator/Separator';
 import Title from '../../components/common/title/Title';
 
 const personalData = [
@@ -147,14 +147,14 @@ const About = () => {
             </div>
             <div className='about--box-stats'>{boxStats}</div>
           </div>
-          <Siparator />
+          <Separator />
           <div className='about--skills'>
             <h3 className='about--title about--title-pd about--title-center'>
               my skills
             </h3>
             <div className='about--progress'>{progressSkills}</div>
           </div>
-          <Siparator />
+          <Separator />
           <div className='about--experience'>
             <h3 className='about--title about--title-pd about--title-center'>
               Experience & Education

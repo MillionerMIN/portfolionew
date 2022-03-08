@@ -2,15 +2,14 @@ import './home.scss';
 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import CustomButton from '../../components/common/button/CustomButton';
 // type HomeType = {
 //   data: string;
 // };
 
-console.log(faArrowRight);
-
-export const Home = () => {
+const Home = () => {
   const iconArrowRight = <FontAwesomeIcon icon={faArrowRight} />;
   return (
     <main className='home'>
@@ -29,9 +28,15 @@ export const Home = () => {
             </p>
             <CustomButton element={iconArrowRight} value='more about me' />
           </div>
-          <div className='home--photo'></div>
+          <TransitionGroup>
+            <CSSTransition classNames='option' timeout={200}>
+              <div className='home--photo'></div>
+            </CSSTransition>
+          </TransitionGroup>
         </div>
       </div>
     </main>
   );
 };
+
+export default Home;
