@@ -11,11 +11,18 @@
   justify-content: center;
   cursor: pointer;
   z-index: 99;
-  transition: all 0.2s linear;
+  opacity: 0;
+  transform: translateX(-120%);
+  transition: all 0.8s ease 0s;
 
   &:hover {
     box-shadow: var(--shadow);
   }
+}
+
+.shifter._active {
+  opacity: 0.9;
+  transform: translateX(0);
 }
 
 .shifter--link {

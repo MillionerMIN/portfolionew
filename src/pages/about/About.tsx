@@ -92,6 +92,7 @@ const educationData = [
 ];
 
 const About = () => {
+  useAnimScroll();
   const listItems = personalData.map((item, index) => {
     return (
       <li key={index}>

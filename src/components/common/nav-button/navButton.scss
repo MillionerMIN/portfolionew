@@ -12,19 +12,15 @@
   color: var(--color-text);
   cursor: pointer;
   z-index: 10;
-  transition: margin-right 1s;
-
-  &:hover {
-    background: var(--color-block);
-    color: var(--color-icon);
-    transition: all 1s margin-right 1s;
-  }
 
   &-selected {
     background: var(--color-block);
     color: var(--color-icon);
-    transition: margin-right 1s;
   }
+}
+
+.nav-button svg {
+  position: fixed;
 }
 
 .nav-button--title {
@@ -43,10 +39,45 @@
   height: 50px;
   margin: 0;
   background-color: var(--color-block);
-  transition: margin-right 1s;
+  opacity: 0;
+  overflow: hidden;
 }
 
-.nav-button--title-none {
-  display: none;
-  transition: margin-right 1s;
+.nav-button--title-show {
+  animation: title-show .5s forwards;
+}
+
+.nav-button--title-done {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-button--title-hide {
+  animation: title-hide .5s forwards;
+}
+
+@keyframes title-show {
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes title-hide {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
 }

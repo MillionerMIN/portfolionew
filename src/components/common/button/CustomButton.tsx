@@ -15,7 +15,7 @@ type CustomButtonPropsType = DefaultButtonPropsType & {
 const CustomButton: React.FC<CustomButtonPropsType> = ({
   ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
 }) => {
-  const finalClassName = `custom-button-pd custom-button`;
+  const finalClassName = `custom-button-pd custom-button anim-item`;
 
   return (
     <button

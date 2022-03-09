@@ -15,7 +15,6 @@
   opacity: 0;
   cursor: pointer;
   transform: transform(-120%, 0);
-  animation: show-scrollUp .5s forwards;
 
   &:hover {
     background-color: var(--color-block);
@@ -43,7 +42,7 @@
 @keyframes show-scrollUp {
   0% {
     opacity: 0;
-    transform: translateX(120px);
+    transform: translateX(120%);
   }
 
   50% {

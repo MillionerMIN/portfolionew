@@ -12,6 +12,9 @@
   z-index: 1;
   cursor: pointer;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(120%);
+  transition: all .8s ease .4s;
 
   &::before {
     z-index: -1;
@@ -25,6 +28,11 @@
     transform: translateX(100%);
     transition: all 0.3s ease-out;
   }
+}
+
+.custom-button._active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .custom-button:hover.custom-button::before {

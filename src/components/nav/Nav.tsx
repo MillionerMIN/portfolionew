@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 
+import useAnimScroll from '../../hooks/useAnimScroll/AnimScroll';
 import NavButton from '../common/nav-button/NavButton';
 
 const itemsNav = [
@@ -19,11 +20,12 @@ const itemsNav = [
 
 const Nav = () => {
   const { pathname } = useLocation();
+  useAnimScroll()
 
   const elements = itemsNav.map((item, index) => {
     return <NavButton key={index} data={item} selected={pathname} />;
   });
-  return <nav className='nav nav-position nav-mr'>{elements}</nav>;
+  return <nav className='nav nav-position nav-mr anim-item'>{elements}</nav>;
 };
 
 export default Nav;

@@ -3,6 +3,7 @@ import './navButton.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 const NavButton = (props: NavButtonType) => {
   const { selected } = props;
@@ -18,9 +19,19 @@ const NavButton = (props: NavButtonType) => {
       onMouseLeave={() => setIsActive(false)}
     >
       <FontAwesomeIcon icon={icon} />
-      <h2 className={isActive ? 'nav-button--title' : 'nav-button--title-none'}>
-        {name}
-      </h2>
+      <CSSTransition
+        in={isActive}
+        timeout={500}
+        mountOnEnter
+        unmountOnExit
+        classNames={{
+          enterActive: 'nav-button--title-show',
+          enterDone: 'nav-button--title-done',
+          exitActive: 'nav-button--title-hide',
+        }}
+      >
+        <h2 className='nav-button--title'>{name}</h2>
+      </CSSTransition>
     </Link>
   );
 };
